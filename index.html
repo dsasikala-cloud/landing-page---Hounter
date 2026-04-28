@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hounter — Find Your Dream Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__logo">
+        <span class="navbar__logo-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="8" fill="#34A853"/>
+            <path d="M16 6L6 13.5V26h6v-7h8v7h6V13.5L16 6z" fill="white"/>
+          </svg>
+        </span>
+        <span class="navbar__logo-text">Hounter</span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <ul class="navbar__links">
+          <li><a href="#" class="navbar__link navbar__link--active">Home</a></li>
+          <li><a href="#about" class="navbar__link">About</a></li>
+          <li><a href="#properties" class="navbar__link">Properties</a></li>
+          <li><a href="#contact" class="navbar__link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#" class="btn btn--outline">Sign In</a>
+        <button class="navbar__hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================== HERO ======================== -->
+    <section class="hero" id="home">
+      <div class="container hero__inner">
+        <!-- Left Content -->
+        <div class="hero__content">
+          <p class="hero__label">Find Your Dream Home</p>
+          <h1 class="hero__title">
+            Discover Most Suitable Property
+          </h1>
+          <p class="hero__desc">
+            We provide a complete service for the sale, purchase or rental of real estate. We have been operating in Spain since 1998.
+          </p>
+
+          <!-- Search Bar -->
+          <div class="search-bar">
+            <div class="search-bar__tabs">
+              <button class="search-bar__tab search-bar__tab--active">Buy</button>
+              <button class="search-bar__tab">Rent</button>
+              <button class="search-bar__tab">Sell</button>
+            </div>
+            <div class="search-bar__form">
+              <div class="search-bar__input-group">
+                <svg class="search-bar__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <input type="text" placeholder="Enter an address, neighborhood, city..." class="search-bar__input" />
+              </div>
+              <button class="btn btn--primary search-bar__btn">Search</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="hero__visual">
+          <div class="hero__image-wrap">
+            <div class="hero__image-bg"></div>
+            <img
+              src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80"
+              alt="Featured property"
+              class="hero__image"
+            />
+            <!-- Floating Best Choice Badge -->
+            <div class="hero__badge hero__badge--choice">
+              <div class="hero__badge-icon">🏆</div>
+              <div>
+                <p class="hero__badge-label">Best Choice</p>
+                <p class="hero__badge-value">#1 in Indonesia</p>
+              </div>
+            </div>
+            <!-- Floating Property Card -->
+            <div class="hero__badge hero__badge--prop">
+              <div class="hero__badge-prop-thumb">
+                <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=80&q=80" alt="Property" />
+              </div>
+              <div class="hero__badge-prop-info">
+                <p class="hero__badge-prop-name">Blueberry Hills</p>
+                <p class="hero__badge-prop-loc">📍 Pettit, TX 79207</p>
+                <p class="hero__badge-prop-price">$14,000 <span>/month</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== STATS ======================== -->
+    <section class="stats">
+      <div class="container stats__inner">
+        <div class="stats__item">
+          <p class="stats__number">7,500+</p>
+          <p class="stats__label">Properties for Sell</p>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <p class="stats__number">3,200+</p>
+          <p class="stats__label">Properties for Rent</p>
+        </div>
+        <div class="stats__divider"></div>
+        <div class="stats__item">
+          <p class="stats__number">2,100+</p>
+          <p class="stats__label">Agent Listings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== FEATURED PROPERTIES ======================== -->
+    <section class="properties" id="properties">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <p class="section-tag">Our Featured Listings</p>
+            <h2 class="section-title">Featured Properties</h2>
+          </div>
+          <div class="properties__tabs">
+            <button class="properties__tab properties__tab--active" data-filter="all">All</button>
+            <button class="properties__tab" data-filter="house">House</button>
+            <button class="properties__tab" data-filter="apartment">Apartment</button>
+            <button class="properties__tab" data-filter="villa">Villa</button>
+          </div>
+        </div>
+
+        <div class="properties__grid" id="propertiesGrid">
+
+          <article class="property-card" data-category="house">
+            <div class="property-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=400&q=80" alt="Sunrise Villa" class="property-card__image" />
+              <span class="property-card__badge">Popular</span>
+              <button class="property-card__fav" aria-label="Favorite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-card__body">
+              <div class="property-card__price-row">
+                <p class="property-card__price">$220,000</p>
+                <span class="property-card__type">For Sale</span>
+              </div>
+              <h3 class="property-card__name">Sunrise Villa</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Malibu, California
+              </p>
+              <div class="property-card__features">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 3 Beds</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12H19M5 12a7 7 0 0 0 7 7M5 12a7 7 0 0 1 7-7m7 0v14"/></svg> 2 Baths</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 1,500 sqft</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-category="apartment">
+            <div class="property-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&q=80" alt="Urban Loft" class="property-card__image" />
+              <span class="property-card__badge property-card__badge--rent">For Rent</span>
+              <button class="property-card__fav" aria-label="Favorite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-card__body">
+              <div class="property-card__price-row">
+                <p class="property-card__price">$3,500 <span>/mo</span></p>
+                <span class="property-card__type property-card__type--rent">For Rent</span>
+              </div>
+              <h3 class="property-card__name">Urban Loft</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Brooklyn, New York
+              </p>
+              <div class="property-card__features">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 2 Beds</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12H19M5 12a7 7 0 0 0 7 7M5 12a7 7 0 0 1 7-7m7 0v14"/></svg> 1 Bath</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 980 sqft</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-category="villa">
+            <div class="property-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=400&q=80" alt="Ocean Breeze Villa" class="property-card__image" />
+              <button class="property-card__fav" aria-label="Favorite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-card__body">
+              <div class="property-card__price-row">
+                <p class="property-card__price">$580,000</p>
+                <span class="property-card__type">For Sale</span>
+              </div>
+              <h3 class="property-card__name">Ocean Breeze Villa</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Miami Beach, FL
+              </p>
+              <div class="property-card__features">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 5 Beds</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12H19M5 12a7 7 0 0 0 7 7M5 12a7 7 0 0 1 7-7m7 0v14"/></svg> 4 Baths</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 3,200 sqft</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-category="house">
+            <div class="property-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=400&q=80" alt="Garden Home" class="property-card__image" />
+              <span class="property-card__badge">New</span>
+              <button class="property-card__fav property-card__fav--active" aria-label="Favorite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-card__body">
+              <div class="property-card__price-row">
+                <p class="property-card__price">$310,000</p>
+                <span class="property-card__type">For Sale</span>
+              </div>
+              <h3 class="property-card__name">Garden Home</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Austin, Texas
+              </p>
+              <div class="property-card__features">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 4 Beds</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12H19M5 12a7 7 0 0 0 7 7M5 12a7 7 0 0 1 7-7m7 0v14"/></svg> 3 Baths</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 2,100 sqft</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-category="apartment">
+            <div class="property-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&q=80" alt="Sky Tower Suite" class="property-card__image" />
+              <button class="property-card__fav" aria-label="Favorite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-card__body">
+              <div class="property-card__price-row">
+                <p class="property-card__price">$2,800 <span>/mo</span></p>
+                <span class="property-card__type property-card__type--rent">For Rent</span>
+              </div>
+              <h3 class="property-card__name">Sky Tower Suite</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Chicago, Illinois
+              </p>
+              <div class="property-card__features">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 1 Bed</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12H19M5 12a7 7 0 0 0 7 7M5 12a7 7 0 0 1 7-7m7 0v14"/></svg> 1 Bath</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 720 sqft</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="property-card" data-category="villa">
+            <div class="property-card__image-wrap">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&q=80" alt="Hillside Retreat" class="property-card__image" />
+              <span class="property-card__badge">Luxury</span>
+              <button class="property-card__fav" aria-label="Favorite">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </button>
+            </div>
+            <div class="property-card__body">
+              <div class="property-card__price-row">
+                <p class="property-card__price">$1,250,000</p>
+                <span class="property-card__type">For Sale</span>
+              </div>
+              <h3 class="property-card__name">Hillside Retreat</h3>
+              <p class="property-card__location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Beverly Hills, CA
+              </p>
+              <div class="property-card__features">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> 6 Beds</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12H19M5 12a7 7 0 0 0 7 7M5 12a7 7 0 0 1 7-7m7 0v14"/></svg> 5 Baths</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> 5,400 sqft</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="properties__cta">
+          <a href="#" class="btn btn--outline btn--large">View All Properties</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== HOW IT WORKS ======================== -->
+    <section class="how-it-works" id="about">
+      <div class="container">
+        <div class="how-it-works__inner">
+          <!-- Left image collage -->
+          <div class="how-it-works__visual">
+            <div class="how-it-works__img-grid">
+              <div class="how-it-works__img-main">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&q=80" alt="Real estate agent" />
+              </div>
+              <div class="how-it-works__img-side">
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=300&q=80" alt="House" />
+                <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=300&q=80" alt="Interior" />
+              </div>
+            </div>
+            <!-- Floating satisfaction card -->
+            <div class="how-it-works__float-card">
+              <div class="how-it-works__float-icon">😊</div>
+              <div>
+                <p class="how-it-works__float-num">250+</p>
+                <p class="how-it-works__float-text">Happy Customers</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right content -->
+          <div class="how-it-works__content">
+            <p class="section-tag">How It Works</p>
+            <h2 class="section-title">Buying Or Renting Has Never Been Easier!</h2>
+            <p class="how-it-works__desc">
+              With our simple 3-step process, you'll find and move into your new home faster than ever before.
+            </p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step__icon step__icon--1">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </div>
+                <div class="step__body">
+                  <h3 class="step__title">Search for Properties</h3>
+                  <p class="step__desc">Browse thousands of listings by location, price, and type. Filter to find your perfect match.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__icon step__icon--2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div class="step__body">
+                  <h3 class="step__title">Visit the Property</h3>
+                  <p class="step__desc">Schedule a viewing with our agents at a time that suits you. See your future home in person.</p>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step__icon step__icon--3">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <div class="step__body">
+                  <h3 class="step__title">Close the Deal</h3>
+                  <p class="step__desc">Our experts handle all paperwork and negotiations. Sign the documents and move in!</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn--primary btn--large">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TESTIMONIALS ======================== -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header section-header--center">
+          <p class="section-tag">Testimonials</p>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <div class="testimonial-card testimonial-card--featured">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "Hounter made finding our dream home incredibly easy. The search filters are super precise and our agent was a tremendous help throughout the whole process."
+            </p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&q=80" alt="Sarah M." class="testimonial-card__avatar" />
+              <div>
+                <p class="testimonial-card__name">Sarah Mitchell</p>
+                <p class="testimonial-card__role">Home Buyer, California</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">
+              "I listed my property on Hounter and received 12 inquiries in the first week. Sold within a month above asking price!"
+            </p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&q=80" alt="David K." class="testimonial-card__avatar" />
+              <div>
+                <p class="testimonial-card__name">David Kowalski</p>
+                <p class="testimonial-card__role">Property Seller, New York</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__stars">★★★★☆</div>
+            <p class="testimonial-card__text">
+              "As a first-time renter, I was nervous, but the team at Hounter walked me through every step. Couldn't recommend more!"
+            </p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80" alt="Emma L." class="testimonial-card__avatar" />
+              <div>
+                <p class="testimonial-card__name">Emma Laurent</p>
+                <p class="testimonial-card__role">Tenant, Chicago</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CTA BANNER ======================== -->
+    <section class="cta-banner" id="contact">
+      <div class="container cta-banner__inner">
+        <div class="cta-banner__content">
+          <p class="section-tag section-tag--light">Start With Hounter Today</p>
+          <h2 class="cta-banner__title">Find Your Dream<br/>Home Now</h2>
+          <p class="cta-banner__desc">Join over 50,000 happy homeowners who found their perfect property through Hounter's trusted platform.</p>
+          <div class="cta-banner__actions">
+            <a href="#" class="btn btn--white">Browse Properties</a>
+            <a href="#" class="btn btn--outline-white">Contact an Agent</a>
+          </div>
+        </div>
+        <div class="cta-banner__image">
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&q=80" alt="Beautiful home" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#" class="navbar__logo">
+          <span class="navbar__logo-icon">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="32" height="32" rx="8" fill="#34A853"/>
+              <path d="M16 6L6 13.5V26h6v-7h8v7h6V13.5L16 6z" fill="white"/>
+            </svg>
+          </span>
+          <span class="navbar__logo-text">Hounter</span>
+        </a>
+        <p class="footer__brand-desc">
+          We provide the best service to help you find your dream home, anywhere in the world.
+        </p>
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Properties</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__heading">Property Type</h4>
+        <ul class="footer__links">
+          <li><a href="#">Houses</a></li>
+          <li><a href="#">Apartments</a></li>
+          <li><a href="#">Villas</a></li>
+          <li><a href="#">Land</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__links-group">
+        <h4 class="footer__heading">Contact</h4>
+        <ul class="footer__links footer__links--contact">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            123 Hounter St, San Francisco, CA
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
+            +1 (800) 468-6837
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            hello@hounter.com
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 Hounter. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
